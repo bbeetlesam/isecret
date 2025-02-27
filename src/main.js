@@ -1,36 +1,37 @@
-import Phaser from 'phaser';
-import { preload, create, update } from './sec.js';
+import Phaser from "phaser";
+import { MainScene } from "./main-scene.js";
+
+// const isLandscape = window.innerWidth > window.innerHeight;
 
 const config = {
     type: Phaser.AUTO,
-    audio: {
-        noAudio: true,
-    },
     render: {
         pixelArt: false,
         antialias: true,
     },
     scale: {
+        parent: "gameId",
         mode: Phaser.Scale.FIT,
-        parent: 'game',
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: 600,
-        height: 1000,
-        min: {
-            width: 320,
-            height: 320
-        },
-        max: {
-            width: 1600,
-            height: 1600
-        }
+        // width: isLandscape ? 1000 : 600,
+        // height: isLandscape ? 600 : 1000,
+        // min: {
+        //     width: 320,
+        //     height: 400
+        // },
+        // max: {
+        //     width: 1600,
+        //     height: 1600
+        // },
+        zoom: 1.5
     },
-    scene: {
-        preload: preload,
-        create: create,
-        update: update
-    },
-    backgroundColor: "#00377a"
+    scene: [MainScene],
+    backgroundColor: "#00377a",
 };
 
 const game = new Phaser.Game(config);
+
+window.addEventListener("resize", () => {
+    // game.scale.resize(window.innerWidth, window.innerHeight);
+    game.scale.refresh();
+});
