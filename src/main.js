@@ -1,5 +1,5 @@
 import Phaser from "phaser";
-import { MainScene } from "./main-scene.js";
+import { MainScene } from "./scene.js";
 
 // const isLandscape = window.innerWidth > window.innerHeight;
 
@@ -13,8 +13,8 @@ const config = {
         parent: "gameId",
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        // width: isLandscape ? 1000 : 600,
-        // height: isLandscape ? 600 : 1000,
+        width: 1440,
+        height: 1000,
         // min: {
         //     width: 320,
         //     height: 400
