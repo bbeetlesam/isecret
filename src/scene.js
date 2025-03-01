@@ -1,5 +1,3 @@
-// import { game } from "./main.js";
-
 export class MainScene extends Phaser.Scene {
     constructor()
     {
@@ -9,7 +7,7 @@ export class MainScene extends Phaser.Scene {
     preload()
     {
         // this.load.image("sky", "https://labs.phaser.io/assets/skies/space3.png");
-        this.load.image("sky", "./img/Screenshot-2024-10-05-235618.png");
+        this.load.image("sky", " ");
         // this.load.svg({key: "tes", url: "./img/milk-tea-svgrepo-com.svg", svgConfig: {width: 800, height: 800}});
     }
     
@@ -32,12 +30,12 @@ export class MainScene extends Phaser.Scene {
         
         this.input.keyboard.on('keydown-SPACE', () => {
             text.setStyle({fontSize: '125px', color: '#00ff00'});
-            // document.getElementById('p').innerHTML = "Paragraph changed.";
+            // document.getElementById('pp').innerHTML = "Paragraph changed.";
         });
         
         this.input.keyboard.on('keyup-SPACE', () => {
             text.setStyle({fontSize: '100px', color: '#fcba03'});
-            // document.getElementById('p').innerHTML = "halo ges";
+            // document.getElementById('pp').innerHTML = "Temanggung Jaawaaak";
         });
 
         this.input.on('pointerdown', (pointer) => {
