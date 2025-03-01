@@ -8,7 +8,7 @@ export class MainScene extends Phaser.Scene {
     
     preload()
     {
-        // this.load.image("sky", "https://labs.phaser.io/assets/skies/space3.png");
+        this.load.image("sky", "https://labs.phaser.io/assets/skies/space3.png");
         this.load.image("sky", "./img/Screenshot-2024-10-05-235618.png");
         // this.load.svg({key: "tes", url: "./img/milk-tea-svgrepo-com.svg", svgConfig: {width: 800, height: 800}});
     }
@@ -21,7 +21,7 @@ export class MainScene extends Phaser.Scene {
         // const svgImage = this.add.image(this.scale.width/2, this.scale.height/2, 'tes');
         // svgImage.setScale(0.8);
         
-        const text = this.add.text(this.scale.width/2, this.scale.height/2, 'Tes 123', {
+        const text = this.add.text(this.scale.width/2, this.scale.height/2, 'Tes Kontol', {
             fontSize: '100px',
             color: '#fcba03',
             fontFamily: 'jetbrains',
